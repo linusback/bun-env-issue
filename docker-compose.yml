@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  working:
+    build:
+      context: ./
+      dockerfile: Dockerfile.working
+    volumes:
+      - ./:/app
+
+  broken:
+    build:
+      context: ./
+      dockerfile: Dockerfile.broken
+    volumes:
+      - ./:/app
+
